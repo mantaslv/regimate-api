@@ -40,7 +40,7 @@ The Regimate API provides the following endpoints:
 
 ### Users
 
-    POST /users/register: Register a new user
+    POST /users/signup: Register a new user
     POST /users/login: Log in an existing user
 
 ### Workouts
