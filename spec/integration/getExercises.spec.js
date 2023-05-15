@@ -6,21 +6,21 @@ beforeAll(async () => await mongoMemoryDb.connect());
 afterAll(async () => await mongoMemoryDb.close());
 afterEach(async () => await mongoMemoryDb.clear());
 
-describe('GET /workouts', () => {
-    it('gets a list of all workouts in reverse chronological order', async () => {
-        await request(server).post('/api/workouts').send({ 
+describe('GET /exercises', () => {
+    it('gets a list of all exercises in reverse chronological order', async () => {
+        await request(server).post('/api/exercises').send({ 
             title: 'Squats', 
             load: 100, 
             sets: 3, 
             reps: 10 
         });
-        await request(server).post('/api/workouts').send({ 
+        await request(server).post('/api/exercises').send({ 
             title: 'Bench Press', 
             load: 100, 
             sets: 3, 
             reps: 10 
         });
-        await request(server).post('/api/workouts').send({ 
+        await request(server).post('/api/exercises').send({ 
             title: 'Deadlifts', 
             load: 100, 
             sets: 3, 
@@ -28,7 +28,7 @@ describe('GET /workouts', () => {
         });
 
         const res = await request(server)
-            .get('/api/workouts')
+            .get('/api/exercises')
             .expect(200);
         
         expect(res.body.map(obj => obj.title))
