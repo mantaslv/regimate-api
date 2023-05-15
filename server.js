@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const workoutRoutes = require('./routes/workouts');
+const exerciseRoutes = require('./routes/exercises');
 const userRoutes = require('./routes/user');
 
 require('dotenv').config();
@@ -21,7 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/api/workouts', workoutRoutes);
+app.use('/api/exercises', exerciseRoutes);
 app.use('/api/user', userRoutes);
 
 if (process.env.NODE_ENV !== "test") {
