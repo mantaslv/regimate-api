@@ -34,6 +34,19 @@ const workoutSchema = new Schema({
     exercises: [exerciseSchema]
 }, { timestamps: true });
 
-const Workout = mongoose.model('Workout', workoutSchema);
+const programmeSchema = new Schema({
+    user_id: {
+        type: String,
+        required: true,
+    },
+    programmeName: {
+        type: String,
+        required: false,
+    },
+    workouts: [workoutSchema]
+}, { timestamps: true });
 
-module.exports = Workout;
+const Workout = mongoose.model('Workout', workoutSchema);
+const Programme = mongoose.model('Programme', programmeSchema);
+
+module.exports = { Workout, Programme };
