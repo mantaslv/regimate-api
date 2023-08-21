@@ -25,7 +25,7 @@ const exerciseSchema = new Schema({
 const workoutSchema = new Schema({
     user_id: {
         type: String,
-        required: true,
+        required: false,
     },
     workoutName: {
         type: String,
