@@ -43,6 +43,10 @@ const programmeSchema = new Schema({
         type: String,
         required: false,
     },
+    daySplit: {
+        type: Number,
+        required: true,
+    },
     workouts: [workoutSchema]
 }, { timestamps: true });
 
