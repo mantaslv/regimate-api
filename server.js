@@ -27,6 +27,7 @@ app.use('/api/exercises', exerciseRoutes);
 app.use('/api/workouts', workoutRoutes);
 app.use('/api/programmes', programmeRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/exercise-directory', exerciseDirectoryRoutes);
 
 if (process.env.NODE_ENV !== "test") {
     mongoose.connect(process.env.MONGODB_URI).then(() => {
