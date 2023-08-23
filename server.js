@@ -6,6 +6,7 @@ const exerciseRoutes = require('./routes/exercises');
 const workoutRoutes = require('./routes/workouts');
 const programmeRoutes = require('./routes/programmes');
 const userRoutes = require('./routes/user');
+const exerciseDirectoryRoutes = require('./routes/exerciseDirectory');
 
 require('dotenv').config();
 

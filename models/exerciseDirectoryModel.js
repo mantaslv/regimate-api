@@ -13,6 +13,6 @@ const exerciseDirectorySchema = new Schema({
     category: String
 });
 
-const ExerciseDirectoryModel = mongoose.model('ExerciseDirectory', exerciseDirectorySchema);
+const ExerciseDirectoryModel = mongoose.model('ExerciseDirectory', exerciseDirectorySchema, 'exerciseDirectory');
 
-module.exports = { ExerciseDirectoryModel };
+module.exports = ExerciseDirectoryModel;

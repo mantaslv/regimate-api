@@ -1,4 +1,5 @@
 const ExerciseDirectoryModel = require('../models/exerciseDirectoryModel');
+const mongoose = require('mongoose');
 
 const getExercises = async (req, res) => {
     const exercises = await ExerciseDirectoryModel.find({});
