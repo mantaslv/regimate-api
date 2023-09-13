@@ -45,7 +45,7 @@ const programmeSchema = new Schema({
     },
     daySplit: {
         type: Number,
-        required: true,
+        required: false,
     },
     workouts: [workoutSchema]
 }, { timestamps: true });
