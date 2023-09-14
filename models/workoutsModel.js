@@ -27,9 +27,13 @@ const workoutSchema = new Schema({
         type: String,
         required: false,
     },
+    id: {
+        type: String,
+        required: true,
+    },
     workoutName: {
         type: String,
-        required: false,
+        required: true,
     },
     exercises: [exerciseSchema]
 }, { timestamps: true });
