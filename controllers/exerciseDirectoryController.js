@@ -1,7 +1,7 @@
 const ExerciseDirectoryModel = require('../models/exerciseDirectoryModel');
 const mongoose = require('mongoose');
 
-const getExercises = async (req, res) => {
+const getExerciseDirectory = async (req, res) => {
     try {
         const exercises = await ExerciseDirectoryModel.find({});
         const renamedExercises = exercises.map(exercise => {
@@ -15,4 +15,4 @@ const getExercises = async (req, res) => {
     }
 };
 
-module.exports = getExercises;
+module.exports = getExerciseDirectory;
