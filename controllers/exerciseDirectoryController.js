@@ -15,4 +15,8 @@ const getExerciseDirectory = async (req, res) => {
     }
 };
 
+const createNewExerciseInDirectory = async (req, res) => {
+    
+};
+
 module.exports = getExerciseDirectory;
